@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Thư viện - Nhóm 7 - HUTECH</title>
+    <link rel="stylesheet" href="style-common.css">
+</head>
+<body>
+    <header>
+        <h1>HỆ THỐNG QUẢN LÝ THƯ VIỆN</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="features/list/list.html">Danh sách sách</a></li>
+                <li><a href="features/add/add.html">Thêm sách mới</a></li>
+                <li><a href="features/edit/edit.html">Sửa thông tin</a></li>
+                <li><a href="features/delete/delete.html">Xóa sách</a></li>
+                <li><a href="features/search/search.html">Tìm kiếm</a></li>
+                <li><a href="features/contact/contact.html">Liên hệ nhóm</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome-box">
+            <h2>Chào mừng bạn đến với Dashboard của Lead</h2>
+            <p>Dự án được quản lý theo mô hình <strong>Git Flow</strong> chuẩn xác.</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="total-books">0</h3>
+                    <p>Tổng số sách</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="available-books">0</h3>
+                    <p>Sách sẵn có</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Nhóm 7 - Lập trình môi trường Windows - HUTECH</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        // Hiển thị thống kê nhanh trên trang chủ
+        const books = getBooks();
+        document.getElementById('total-books').innerText = books.length;
+        document.getElementById('available-books').innerText = books.filter(b => b.status === "Còn sách").length;
+    </script>
+</body>
+</html>

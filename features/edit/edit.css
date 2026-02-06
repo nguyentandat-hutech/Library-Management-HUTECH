@@ -1,0 +1,107 @@
+/* edit.css */
+
+.form-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-box h2 {
+    color: var(--hutech-blue);
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Group tìm kiếm ID */
+.search-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--hutech-blue);
+    box-shadow: 0 0 5px rgba(0, 74, 153, 0.2);
+}
+
+/* Nút bấm */
+.btn-search, .btn-save {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    padding: 12px 25px;
+}
+
+.btn-search {
+    background-color: var(--hutech-blue);
+    color: white;
+}
+
+.btn-search:hover {
+    background-color: #003366;
+    transform: scale(1.02);
+}
+
+.btn-save {
+    background: var(--hutech-blue-gradient);
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 74, 153, 0.2);
+}
+
+.btn-save:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 15px rgba(0, 74, 153, 0.3);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+#msg {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Animation nhẹ khi hiện Form */
+#edit-form {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

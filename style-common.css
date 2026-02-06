@@ -5,6 +5,7 @@
     --dark-grey: #333;
     --light-grey: #f4f4f4;
     --white: #ffffff;
+    --hutech-blue-gradient: linear-gradient(135deg, #004a99 0%, #003377 100%);
 }
 
 * {

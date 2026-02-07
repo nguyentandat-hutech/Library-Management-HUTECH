@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xóa Sách - Quản lý Thư viện</title>
+    <!-- Link CSS chung của toàn app (nếu có, ở đây dùng tạm path tương đối) -->
+    <!-- Giả sử style-common.css nằm ở root -->
+    <link rel="stylesheet" href="../../style-common.css"> 
+    <link rel="stylesheet" href="delete.css">
+</head>
+<body>
+    <header>
+        <h1>XÓA SÁCH KHỎI HỆ THỐNG</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Trang chủ</a></li>
+                <li><a href="../list/list.html">Danh sách sách</a></li>
+                <li><a href="../add/add.html">Thêm sách mới</a></li>
+                <li><a href="../edit/edit.html">Sửa thông tin</a></li>
+                <li><a href="delete.html" class="active">Xóa sách</a></li>
+                <li><a href="../search/search.html">Tìm kiếm</a></li>
+                <li><a href="../contact/contact.html">Liên hệ nhóm</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="delete-section">
+            <h2>Chọn sách cần xóa</h2>
+            <div id="message" class="message"></div>
+            
+            <table id="books-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên sách</th>
+                        <th>Tác giả</th>
+                        <th>Thể loại</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="books-body">
+                    <!-- Dữ liệu sách sẽ được đổ vào đây bằng JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Nhóm 7 - Lập trình môi trường Windows - HUTECH</p>
+    </footer>
+
+    <!-- Script data.js chung -->
+    <script src="../../data.js"></script>
+    <!-- Script riêng cho trang delete -->
+    <script src="delete.js"></script>
+</body>
+</html>

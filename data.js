@@ -1,6 +1,4 @@
-/* data.js - Quản lý dữ liệu dùng chung cho cả nhóm */
 
-// 1. Dữ liệu mặc định ban đầu (Đã thêm nhiều sách mẫu)
 const defaultBooks = [
     { id: 101, title: "Lập trình Windows", author: "HUTECH", category: "CNTT", status: "Còn sách" },
     { id: 102, title: "Kinh tế chính trị Mác-Lênin", author: "Bộ Giáo Dục", category: "Giáo dục", status: "Đã mượn" },
@@ -12,7 +10,7 @@ const defaultBooks = [
     { id: 108, title: "Lập trình di động Flutter", author: "Google Team", category: "Di động", status: "Còn sách" }
 ];
 
-// 2. Hàm lấy dữ liệu từ trình duyệt
+
 function getBooks() {
     const data = localStorage.getItem('hutech_library_data');
     if (!data) {
@@ -22,7 +20,7 @@ function getBooks() {
     return JSON.parse(data);
 }
 
-// 3. Hàm lưu dữ liệu vào trình duyệt
+
 function saveBooks(booksArray) {
     localStorage.setItem('hutech_library_data', JSON.stringify(booksArray));
 }

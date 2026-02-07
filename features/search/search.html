@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm sách - Hệ thống quản lý thư viện</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+    <header>
+        <div class="main-header">
+            <h1>HỆ THỐNG QUẢN LÝ THƯ VIỆN</h1>
+        </div>
+        
+        <nav class="main-nav">
+    <a href="../../index.html">Trang chủ</a>
+    
+    <a href="../list/list.html">Danh sách sách</a>
+    <a href="../add/add.html">Thêm sách mới</a>
+    <a href="../edit/edit.html">Sửa thông tin</a>
+    <a href="../delete/delete.html">Xóa sách</a>
+    
+    <a href="#" class="active">Tìm kiếm</a>
+    
+    <a href="../contact/contact.html">Liên hệ nhóm</a>
+</nav>
+    </header>
+
+    <section class="search-feature-container">
+        <div class="search-header-content">
+            <h2><i class="fa-solid fa-book-open"></i> Tra cứu sách thư viện</h2>
+            <p class="sub-text">Tìm kiếm hàng ngàn đầu sách, tài liệu học tập và nghiên cứu.</p>
+            
+            <div class="search-bar-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Nhập tên sách, tác giả...">
+                <button id="btnSearchAction">Tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="search-controls">
+            <div class="filter-group">
+                <label><i class="fa-solid fa-filter"></i> Thể loại:</label>
+                <select id="categoryFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="it">Công nghệ thông tin</option>
+                    <option value="economics">Kinh tế</option>
+                    <option value="literature">Văn học</option>
+                </select>
+            </div>
+
+            <div class="sort-group">
+                <label><i class="fa-solid fa-arrow-down-a-z"></i> Sắp xếp:</label>
+                <select id="sortBy">
+                    <option value="newest">Mới nhất</option>
+                    <option value="titleAZ">Tên (A-Z)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-area">
+            <div id="loadingState" class="state-message hidden">
+                <i class="fa-solid fa-spinner fa-spin"></i> Đang tìm kiếm...
+            </div>
+            <div id="noResultsState" class="state-message hidden">
+                <img src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" alt="Not found" width="80">
+                <h3>Không tìm thấy kết quả nào</h3>
+            </div>
+            <div id="searchResultsGrid" class="results-grid"></div>
+        </div>
+    </section>
+
+    <script src="search.js"></script>
+</body>
+</html>

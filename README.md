@@ -11,6 +11,5 @@
 | 3 | Nguyễn Nhật Quang | | [@NguyenNhatquang522004](https://github.com/NguyenNhatquang522004) | Developer |
 | 4 | Huỳnh Ngọc Rin | | [@Rin267](https://github.com/Rin267) | Developer |
 | 5 | Phạm Ai Ngân | | [@NganPham-tech](https://github.com/NganPham-tech) | Developer |
-| 6 | Bùi Hồng Sinh |  | [@Sinhbuiday](https://github.com/Sinhbuiday) | Developer |
-| 7 | Huỳnh Lê Hồng Xuyến | | [@xuyen134](https://github.com/xuyen134) | Developer |
+
 

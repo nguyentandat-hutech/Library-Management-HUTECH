@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa sách - HUTECH</title>
+    <link rel="stylesheet" href="../../style-common.css">
+    <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+    <header>
+        <h1>CHỈNH SỬA THÔNG TIN SÁCH</h1>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Trang chủ</a></li>
+                <li><a href="../list/list.html">Danh sách sách</a></li>
+                <li><a href="../add/add.html">Thêm sách mới</a></li>
+                <li><a href="edit.html" class="active">Sửa thông tin</a></li>
+                <li><a href="../delete/delete.html">Xóa sách</a></li>
+                <li><a href="../search/search.html">Tìm kiếm</a></li>
+                <li><a href="../contact/contact.html">Liên hệ nhóm</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="form-box">
+            <h2>Cập nhật thông tin sách</h2>
+            
+            <div class="search-section">
+                <label for="search-id">Nhập ID sách cần sửa:</label>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <input type="number" id="search-id" placeholder="Ví dụ: 101">
+                    <button type="button" onclick="loadBookData()" class="btn-search">Tìm kiếm</button>
+                </div>
+                <p id="msg" style="margin-top: 10px; font-weight: bold;"></p>
+            </div>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <form id="edit-form" style="display: none;">
+                <div class="input-group">
+                    <label>Mã sách (ID):</label>
+                    <input type="text" id="edit-id" readonly style="background-color: #f0f0f0; cursor: not-allowed;">
+                    <small>* Không thể thay đổi ID</small>
+                </div>
+
+                <div class="input-group">
+                    <label>Tên sách (Title):</label>
+                    <input type="text" id="edit-title" placeholder="Nhập tên sách..." required>
+                </div>
+
+                <div class="input-group">
+                    <label>Tác giả (Author):</label>
+                    <input type="text" id="edit-author" placeholder="Nhập tên tác giả..." required>
+                </div>
+
+                <div class="input-group">
+                    <label>Thể loại (Category):</label>
+                    <input type="text" id="edit-category" placeholder="Ví dụ: CNTT, Giáo dục..." required>
+                </div>
+
+                <div class="input-group">
+                    <label>Trạng thái (Status):</label>
+                    <select id="edit-status">
+                        <option value="Còn sách">Còn sách</option>
+                        <option value="Đã mượn">Đã mượn</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-save">LƯU THAY ĐỔI</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Nhóm 7 - Lập trình môi trường Windows - HUTECH</p>
+    </footer>
+
+    <script src="../../data.js"></script>
+    <script src="edit.js"></script>
+</body>
+</html>
